@@ -9,12 +9,13 @@ body{
 #display{
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: right;
+    text-align: left;
     height: 70px;
     line-height: 70px;
-    padding: 16px 8px;
+    padding: 16px 20px;
     font-size: 35px;
     border: 2px solid #999;
+    overflow: hidden;
 }
 .buttons{
     display: grid;
