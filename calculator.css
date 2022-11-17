@@ -1,48 +1,69 @@
+:root{
+    --borderGreen: rgb(20, 200, 50);
+    --softGreen: rgba(7, 172, 46, 0.636);
+    --displayGreen: rgb(67, 255, 20);
+}
 body{
     background-color: black;
+    margin: 0;
+}
+#background{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(https://thumbs.gfycat.com/HilariousMemorableArkshell-size_restricted.gif);
+    background-size: cover;
 }
 .container{
-    max-width: 500px;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 30px 17px  #999;
+    max-width: 400px;
+    margin: 0 50px;
+    background-color: black;
 }
 #display{
-    color: white;
+    color: var(--displayGreen);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
-    height: 70px;
+    height: 50px;
     line-height: 70px;
     padding: 16px 20px;
     font-size: 35px;
-    border: 2px solid #999;
+    border: 2px solid var(--borderGreen);
+    border-bottom: 1px solid var(--borderGreen);
     overflow: hidden;
 }
 .buttons{
     display: grid;
-    border-bottom:1px solid #999;
-    border-left:1px solid #999;
+    border:2px solid var(--borderGreen);
+    border-top: 1px solid var(--borderGreen);
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .buttons > div{
-    border-top: 1px solid #999;
-    border-right: 1px solid #999;
+    border-top: 1px solid var(--borderGreen);
+    border-right: 1px solid var(--borderGreen);
 }
 .button{
-    color: #999;
-    border: 0.5px solid #999;
-    line-height: 100px;
+    display: grid;
+    color: var(--borderGreen);
+    border: 0.5px solid var(--borderGreen);
+    height: 80px;
+    width: 80px;
     text-align: center;
+    align-items: center;
     font-size: 35px;
     cursor: pointer;
     margin: 3px 5px;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 .button:hover{
     background-color: rgba(67, 66, 66, 0.276);
     color: white;
     font-weight: 400;
     transition: 0.5s ease-in-out;
-    box-shadow: 0px 0px 3px 1px  rgba(220, 223, 207, 0.636);
+    box-shadow: 0px 0px 3px 1px  var(--softGreen);
 }
 #equal{
     background-color: rgba(62, 62, 186, 0.567);
