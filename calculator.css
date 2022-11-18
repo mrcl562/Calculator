@@ -1,7 +1,10 @@
 :root{
-    --borderGreen: rgb(20, 200, 50);
-    --softGreen: rgba(7, 172, 46, 0.636);
-    --displayGreen: rgb(67, 255, 20);
+    --borderColor: rgb(20, 200, 50);
+    --shadowColor: rgba(7, 172, 46, 0.636);
+    --displayColor: rgb(67, 255, 20);
+    --equalColor: rgba(153, 11, 90, 0.6);
+    --equalColorHover: rgba(40, 30, 25, 0.6);
+    --equalColorHoverInside: rgba(13, 155, 0, 0.6);
 }
 body{
     background-color: black;
@@ -21,34 +24,34 @@ body{
 .container{
     max-width: 400px;
     margin: 0 50px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 #display{
-    color: var(--displayGreen);
+    color: var(--displayColor);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
     height: 50px;
     line-height: 70px;
     padding: 16px 20px;
     font-size: 35px;
-    border: 2px solid var(--borderGreen);
-    border-bottom: 1px solid var(--borderGreen);
+    border: 2px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
     overflow: hidden;
 }
 .buttons{
     display: grid;
-    border:2px solid var(--borderGreen);
-    border-top: 1px solid var(--borderGreen);
+    border:2px solid var(--borderColor);
+    border-top: 1px solid var(--borderColor);
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .buttons > div{
-    border-top: 1px solid var(--borderGreen);
-    border-right: 1px solid var(--borderGreen);
+    border-top: 1px solid var(--borderColor);
+    border-right: 1px solid var(--borderColor);
 }
 .button{
     display: grid;
-    color: var(--borderGreen);
-    border: 0.5px solid var(--borderGreen);
+    color: var(--borderColor);
+    border: 0.5px solid var(--borderColor);
     height: 80px;
     width: 80px;
     text-align: center;
@@ -63,13 +66,27 @@ body{
     color: white;
     font-weight: 400;
     transition: 0.5s ease-in-out;
-    box-shadow: 0px 0px 3px 1px  var(--softGreen);
+    box-shadow: 0px 0px 3px 1px  var(--shadowColor);
 }
 #equal{
-    background-color: rgba(62, 62, 186, 0.567);
+    background-color: var(--equalColor);
     font-weight: bold;
-    color: white;
+    color: var(--displayColor);
 }
 #equal:hover{
-    background-color: rgba(58, 58, 232, 0.73);
+    background-color: var(--equalColorHover);
+    color: var(--displayColor);
+}
+
+#description{
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: aliceblue;
+    height: 530px;
+    width: 700px;
+    background-image: linear-gradient(var(--borderColor),var(--shadowColor));
+    border-radius: 50px;
+    font-size: 30px;
 }
